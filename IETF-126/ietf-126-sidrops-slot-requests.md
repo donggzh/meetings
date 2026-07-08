@@ -25,7 +25,8 @@ Create a Pull Request appending, at the end of this very file, the request using
 #### IPv6 Mapping Prefix PDU for the RPKI-Router Protocol
 - Speaker: Guozhen Dong 
 - Desired Duration: 10 minutes (including Q&A)
-- Expected outcome: Community feedback 
+- Expected outcome: Community feedback
+- Abstract：This draft defines a new Protocol Data Unit (PDU) type for the RPKI Protocol to convey Mapping Origin Authorization (MOA) information from RPKI caches to routers. This extensions enables routers to perform Mapping Origin Validation (MOV) for IPv4-to-IPv6 address mapping announcements in IPv6-only underlay networks. （This draft was suggested by the chairs at IETF125）
 - Datatracker Link: https://datatracker.ietf.org/doc/draft-dong-sidrops-rpki-rtr-moa-pdu/
 
 #### A Profile for Source Prefix Authorizations (SPAs)
