@@ -28,3 +28,10 @@ Create a Pull Request appending, at the end of this very file, the request using
 - Expected outcome: community feedback / call for WG adoption
 - Abstract: Discussion on the concept of using mixed signing algorithm certificate chains in the RPKI. Permitting a second (widely supported) signing algorithm in the RPKI allows for smaller signatures in the short term and gaining operational experience towards PQ transitions in the long term.   
 - Datatracker link: To be posted
+
+#### IPv6 Mapping Prefix PDU for the RPKI-Router Protocol
+- Speaker: Guozhen Dong
+- Desired duration: 10 minutes
+- Expected outcome: call for WG adoption
+- Abstract: The draft defines a new Protocol Data Unit (PDU) type for the RPKI to Router Protocol to convey Mapping Origin Authorization (MOA) information from RPKI caches to routers.   
+- Datatracker link: To be posted
