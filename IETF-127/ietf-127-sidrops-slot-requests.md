@@ -77,3 +77,10 @@ Create a Pull Request appending, at the end of this very file, the request using
 - Abstract:This draft analyzes RPKI/ROV deployment gaps and cross-plane information asymmetry, describes operational side effects, and frames the problem space for future work, without proposing new protocols.
 - Datatracker Link: [https://datatracker.ietf.org/doc/draft-cheng-sidrops-rpki-rov-gap-analysis/](https://datatracker.ietf.org/doc/draft-cheng-sidrops-rpki-rov-gap-analysis/)
 
+
+#### Route Origin Authorization via Protected Delegation of Internet Number Resources
+- Speaker: Joseph Gersch
+- Desired Duration: 10 minutes (including Q&A)
+- Expected outcome: community feedback
+- Abstract: RPKI provides cryptographic route-origin authorization, but its hierarchical authority model gives a superior authority no way to permanently divest itself of control over a delegated resource. This draft explores a different property: a holder may elect a protected delegation boundary beyond which superior authorities can no longer reclaim the resource, suppress the holder's effective origin authorizations, or create competing allocation or route-origin authority. It specifies a hierarchical IPv4/IPv6 resource registry that enforces this at state-transition time and derives conventional VRPs for ROV, with conflict and precedence rules for coexistence with RPKI-derived authority. Routers and the RPKI itself are unchanged. The mechanism can also cover resources RPKI does not protect today, including legacy space. Experimental -00; feedback sought on whether protected delegation is a useful property, on the RPKI coexistence/precedence semantics, and on the trust, recovery and finality tradeoffs.
+- Datatracker Link: [https://datatracker.ietf.org/doc/draft-gersch-sidrops-sovereign-roots/](https://datatracker.ietf.org/doc/draft-gersch-sidrops-sovereign-roots/)
