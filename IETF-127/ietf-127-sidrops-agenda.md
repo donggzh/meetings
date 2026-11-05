@@ -79,57 +79,61 @@ SECRETARY: Krishnaswamy Ananthamurthy (kriswamy AT cisco.com)
 - Datatracker Link: 
     - [draft-yoshikawa-sidrops-pqc-rpki](https://datatracker.ietf.org/doc/draft-yoshikawa-sidrops-pqc-rpki/)
  
+
 #### 5. Mixed Algorithm Certificate Chains in the RPKI
 - Speaker: Job Snijders
-    - Duration: 15 minutes (Cumulative Time: *85 Minutes*)
+    - Duration: 15 minutes (Cumulative Time: *55 Minutes*)
 - Expected outcome: community feedback / call for WG adoption
 - Abstract: Discussion on the concept of using mixed signing algorithm certificate chains in the RPKI. Permitting a second (widely supported) signing algorithm in the RPKI allows for smaller signatures in the short term and gaining operational experience towards PQ transitions in the long term. 
 
+
 #### 6. BGP Signed Origin Delegation Attestation (SODA)
 - Speaker: Shenglin(Forrest) Jiang
-    - Duration: 10 minutes (Cumulative Time: *50 Minutes*)
+    - Duration: 10 minutes (Cumulative Time: *65 Minutes*)
 - Expected outcome: community feedback
 - Abstract: Using SODA, a validator performing Route Origin Validation (ROV) can determine whether an ROV-Invalid result reflects an authorized delegation rather than a route hijack.
 - Datatracker link: [https://datatracker.ietf.org/doc/draft-jiang-idr-bgp-soda/](https://datatracker.ietf.org/doc/draft-jiang-idr-bgp-soda/)
 
-#### 7. Source Pre-validation in RPKI ROV
+
+#### 7. Information Asymmetry and Deployment Gaps in RPKI-based Route Origin Validation
+- Speaker: Weiqiang Cheng
+    - Duration: 10 minutes (Cumulative Time: *75 Minutes*)
+- Expected outcome: community feedback
+- Abstract:This draft analyzes RPKI/ROV deployment gaps and cross-plane information asymmetry, describes operational side effects, and frames the problem space for future work, without proposing new protocols.
+- Datatracker Link: 
+    - [draft-cheng-sidrops-rpki-rov-gap-analysis](https://datatracker.ietf.org/doc/draft-cheng-sidrops-rpki-rov-gap-analysis/)
+
+
+#### 8. Source Pre-validation in RPKI ROV
 - Speaker: Mingqing Huang
-    - Duration: 10 minutes (Cumulative Time: *60 Minutes*)
+    - Duration: 10 minutes (Cumulative Time: *85 Minutes*)
 - Expected outcome: community feedback
 - Abstract: This document defines a BCP for source pre-validation: an originating AS checks its intended BGP announcement against its local RPKI cache before sending it to eBGP neighbors. The goal is to reduce the number of self-inflicted invalid routes, improve global routing stability, and encourage wider and more confident deployment of ROV drop policies across the Internet - including the long tail of stub and small regional ASes.
 - Datatracker Link: 
     - [draft-huang-sidrops-source-pre-validation/](https://datatracker.ietf.org/doc/draft-huang-sidrops-source-pre-validation/)
-
-#### 8. Considerations for Incremental Validation in RPKI Relying Parties
-- Speaker: Yingying Su, Yirong Yu
-    - Duration: 10 minutes (Cumulative Time: *70 Minutes*)
-- Expected outcome: community feedback
-- Abstract: This document describes the operational problem and design space for incremental validation in RPKI Relying Parties (RPs), and discusses general correctness and security considerations for reusing previously computed validation state. The goal is to reduce redundant validation work after incremental repository synchronization. The correctness objective is to produce the same validated payload output as full validation for the same repository snapshot, trust anchor set, validation policy, validation time, and applicable RPKI validation rules. This document does not specify a particular algorithm or cache structure, change RPKI object formats, repository synchronization protocols, or validation semantics, or require RPs to implement incremental validation.
-- Datatracker Link: 
-    - [draft-su-sidrops-rpki-rp-incremental-validation](https://datatracker.ietf.org/doc/draft-su-sidrops-rpki-rp-incremental-validation/)
-
 
 #### Buffer 5 Minutes (Cumulative Time: 90 Minutes)
 
 
 ###  AGENDA SESSION II (Friday)
 
-#### 9. Push Mode Extension for the RPKI to Router Protocol
-- Speaker: Liyan Gong
+
+#### 9. Considerations for Incremental Validation in RPKI Relying Parties
+- Speaker: Yingying Su, Yirong Yu
     - Duration: 10 minutes (Cumulative Time: *100 Minutes*)
+- Expected outcome: community feedback
+- Abstract: This document describes the operational problem and design space for incremental validation in RPKI Relying Parties (RPs), and discusses general correctness and security considerations for reusing previously computed validation state. The goal is to reduce redundant validation work after incremental repository synchronization. The correctness objective is to produce the same validated payload output as full validation for the same repository snapshot, trust anchor set, validation policy, validation time, and applicable RPKI validation rules. This document does not specify a particular algorithm or cache structure, change RPKI object formats, repository synchronization protocols, or validation semantics, or require RPs to implement incremental validation.
+- Datatracker Link: 
+    - [draft-su-sidrops-rpki-rp-incremental-validation](https://datatracker.ietf.org/doc/draft-su-sidrops-rpki-rp-incremental-validation/)
+
+
+#### 10. Push Mode Extension for the RPKI to Router Protocol
+- Speaker: Liyan Gong
+    - Duration: 10 minutes (Cumulative Time: *110 Minutes*)
 - Expected outcome: community feedback
 - Abstract: This document defines a push mode extension for RTR that allows RPs to proactively push RPKI data updates to routers, either periodically or event-driven.  
 - Datatracker link: 
     - [draft-gong-sidrops-rtr-push](https://datatracker.ietf.org/doc/draft-gong-sidrops-rtr-push/)
-
-
-#### 10. Information Asymmetry and Deployment Gaps in RPKI-based Route Origin Validation
-- Speaker: Weiqiang Cheng
-    - Duration: 10 minutes (Cumulative Time: *110 Minutes*)
-- Expected outcome: community feedback
-- Abstract:This draft analyzes RPKI/ROV deployment gaps and cross-plane information asymmetry, describes operational side effects, and frames the problem space for future work, without proposing new protocols.
-- Datatracker Link: 
-    - [draft-cheng-sidrops-rpki-rov-gap-analysis](https://datatracker.ietf.org/doc/draft-cheng-sidrops-rpki-rov-gap-analysis/)
 
 
 #### 11. Route Origin Authorization via Protected Delegation of Internet Number Resources
