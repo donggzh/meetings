@@ -84,3 +84,11 @@ Create a Pull Request appending, at the end of this very file, the request using
 - Expected outcome: community feedback
 - Abstract: RPKI provides cryptographic route-origin authorization, but its hierarchical authority model gives a superior authority no way to permanently divest itself of control over a delegated resource. This draft explores a different property: a holder may elect a protected delegation boundary beyond which superior authorities can no longer reclaim the resource, suppress the holder's effective origin authorizations, or create competing allocation or route-origin authority. It specifies a hierarchical IPv4/IPv6 resource registry that enforces this at state-transition time and derives conventional VRPs for ROV, with conflict and precedence rules for coexistence with RPKI-derived authority. Routers and the RPKI itself are unchanged. The mechanism can also cover resources RPKI does not protect today, including legacy space. Experimental -00; feedback sought on whether protected delegation is a useful property, on the RPKI coexistence/precedence semantics, and on the trust, recovery and finality tradeoffs.
 - Datatracker Link: [https://datatracker.ietf.org/doc/draft-gersch-sidrops-sovereign-roots/](https://datatracker.ietf.org/doc/draft-gersch-sidrops-sovereign-roots/)
+
+#### Export of BGP Prefix Origin Validation in IP Flow Information Export (IPFIX)
+- Speaker: Xueyan Song
+- Desired Duration: 5 minutes (Friday session)
+- Expected outcome: community feedback
+- Abstract:The draft defines an IPFIX Information Element to export the RPKI-based BGP Prefix Origin Validation state (valid/invalid/not-found) for the active Loc-RIB route. It gives operators standardized visibility into ROV outcomes alongside flow monitoring, helping detect hijacks/misconfigurations and bridging SIDR operations with existing IPFIX tooling. 
+- Datatracker Link: [https://datatracker.ietf.org/doc/draft-liu-sidrops-ipfix-bgp-pov/](https://datatracker.ietf.org/doc/draft-liu-sidrops-ipfix-bgp-pov/)
+   
