@@ -34,7 +34,7 @@ SECRETARY: Krishnaswamy Ananthamurthy (kriswamy AT cisco.com)
     - ***Room: [Continental 5](https://datatracker.ietf.org/meeting/127/floor-plan?room=continental-5)***
 
 --- 
-###  AGENDA
+###  AGENDA SESSION I
 
 #### 0. Administration
 -  Speakers: Russ/Luigi/Krishna
@@ -43,26 +43,111 @@ SECRETARY: Krishnaswamy Ananthamurthy (kriswamy AT cisco.com)
         - 5 Minutes (Cumulative Time: *5 Minutes*)
 <br><br>
 
-#### 1. XXX
-- Speaker: 
-    - Duration: XX minutes (Cumulative Time: *YY Minutes*)
-    - Expected outcome: 
-    - Abstract: 
-    - Datatracker link(s): 
-      - [Datatracker](https://datatracker.ietf.org/group/sidrops/documents/) 
+
+###  AGENDA SESSION I (Tuesday)
+
+
+#### 1. RPKI Terminology
+- Speaker: Chairs 
+    - Duration: 5 minutes (Cumulative Time: *10 Minutes*)
+- Expected outcome: Check Adoption Consensus
+- Abstract: The Resource Public Key Infrastructure (RPKI) is defined in dozens of different RFCs.  The terminology used by implementers and developers of RPKI protocols, and by operators of RPKI systems, can at times be inconsistent, leading to confusion.  In an effort to improve consistency in this respect, this document provides a single location for definitions of commonly-used RPKI terms.
+- Datatracker link(s): 
+    - [draft-yan-sidrops-rpki-terminology](https://datatracker.ietf.org/doc/draft-yan-sidrops-rpki-terminology/) 
+
+#### 2. Introduction to RPKI Doctors
+- Speaker: Job Snijders
+    - Duration: 10 minutes (Cumulative Time: *20 Minutes*)
+- Expected outcome: community feedback
+- Abstract: Explain objective and approach of RPKI Doctors review team
+- Datatracker link: 
+    - [https://datatracker.ietf.org/group/rpkidoctors/about/](https://datatracker.ietf.org/group/rpkidoctors/about/)
+
+
+#### 3. RPKIViews project update
+- Speaker: Job Snijders
+    - Duration: 10 minutes (Cumulative Time: *30 Minutes*)
+- Expected outcome: community feedback
+- Abstract: RPKIViews' open data archives play a vital role towards understanding the dynamics of the global RPKI. In this talk I'd like to share an update on the state of the project and announce a new (free) service for protocol designers, researchers, and other interested parties.
+
+
+#### 4. Post-Quantum Cryptography for the RPKI
+- Speaker: Tomoki Yoshikawa
+    - Duration: 10 minutes (Cumulative Time: *40 Minutes*)
+- Expected outcome: Community feedback / call for WG adoption
+- Abstract: This draft investigates the use of post-quantum cryptography in the RPKI, covering experimental implementations, performance evaluations, and migration considerations. The presentation will summarize the updates in -03 and seek community feedback on the document's direction and WG adoption.
+- Datatracker Link: 
+    - [draft-yoshikawa-sidrops-pqc-rpki](https://datatracker.ietf.org/doc/draft-yoshikawa-sidrops-pqc-rpki/)
+ 
+#### 5. Mixed Algorithm Certificate Chains in the RPKI
+- Speaker: Job Snijders
+    - Duration: 15 minutes (Cumulative Time: *85 Minutes*)
+- Expected outcome: community feedback / call for WG adoption
+- Abstract: Discussion on the concept of using mixed signing algorithm certificate chains in the RPKI. Permitting a second (widely supported) signing algorithm in the RPKI allows for smaller signatures in the short term and gaining operational experience towards PQ transitions in the long term. 
+
+#### 6. BGP Signed Origin Delegation Attestation (SODA)
+- Speaker: Shenglin(Forrest) Jiang
+    - Duration: 10 minutes (Cumulative Time: *50 Minutes*)
+- Expected outcome: community feedback
+- Abstract: Using SODA, a validator performing Route Origin Validation (ROV) can determine whether an ROV-Invalid result reflects an authorized delegation rather than a route hijack.
+- Datatracker link: [https://datatracker.ietf.org/doc/draft-jiang-idr-bgp-soda/](https://datatracker.ietf.org/doc/draft-jiang-idr-bgp-soda/)
+
+#### 7. Source Pre-validation in RPKI ROV
+- Speaker: Mingqing Huang
+    - Duration: 10 minutes (Cumulative Time: *60 Minutes*)
+- Expected outcome: community feedback
+- Abstract: This document defines a BCP for source pre-validation: an originating AS checks its intended BGP announcement against its local RPKI cache before sending it to eBGP neighbors. The goal is to reduce the number of self-inflicted invalid routes, improve global routing stability, and encourage wider and more confident deployment of ROV drop policies across the Internet - including the long tail of stub and small regional ASes.
+- Datatracker Link: 
+    - [draft-huang-sidrops-source-pre-validation/](https://datatracker.ietf.org/doc/draft-huang-sidrops-source-pre-validation/)
+
+#### 8. Considerations for Incremental Validation in RPKI Relying Parties
+- Speaker: Yingying Su, Yirong Yu
+    - Duration: 10 minutes (Cumulative Time: *70 Minutes*)
+- Expected outcome: community feedback
+- Abstract: This document describes the operational problem and design space for incremental validation in RPKI Relying Parties (RPs), and discusses general correctness and security considerations for reusing previously computed validation state. The goal is to reduce redundant validation work after incremental repository synchronization. The correctness objective is to produce the same validated payload output as full validation for the same repository snapshot, trust anchor set, validation policy, validation time, and applicable RPKI validation rules. This document does not specify a particular algorithm or cache structure, change RPKI object formats, repository synchronization protocols, or validation semantics, or require RPs to implement incremental validation.
+- Datatracker Link: 
+    - [draft-su-sidrops-rpki-rp-incremental-validation](https://datatracker.ietf.org/doc/draft-su-sidrops-rpki-rp-incremental-validation/)
+
+
+#### Buffer 5 Minutes (Cumulative Time: 90 Minutes)
+
+
+###  AGENDA SESSION II (Friday)
+
+#### 9. Push Mode Extension for the RPKI to Router Protocol
+- Speaker: Liyan Gong
+    - Duration: 10 minutes (Cumulative Time: *100 Minutes*)
+- Expected outcome: community feedback
+- Abstract: This document defines a push mode extension for RTR that allows RPs to proactively push RPKI data updates to routers, either periodically or event-driven.  
+- Datatracker link: 
+    - [draft-gong-sidrops-rtr-push](https://datatracker.ietf.org/doc/draft-gong-sidrops-rtr-push/)
+
+
+#### 10. Information Asymmetry and Deployment Gaps in RPKI-based Route Origin Validation
+- Speaker: Weiqiang Cheng
+    - Duration: 10 minutes (Cumulative Time: *110 Minutes*)
+- Expected outcome: community feedback
+- Abstract:This draft analyzes RPKI/ROV deployment gaps and cross-plane information asymmetry, describes operational side effects, and frames the problem space for future work, without proposing new protocols.
+- Datatracker Link: 
+    - [draft-cheng-sidrops-rpki-rov-gap-analysis](https://datatracker.ietf.org/doc/draft-cheng-sidrops-rpki-rov-gap-analysis/)
+
+
+#### 11. Route Origin Authorization via Protected Delegation of Internet Number Resources
+- Speaker: Joseph Gersch
+   - Duration: 10 minutes (Cumulative Time: *120 Minutes*)
+- Expected outcome: community feedback
+- Abstract: RPKI provides cryptographic route-origin authorization, but its hierarchical authority model gives a superior authority no way to permanently divest itself of control over a delegated resource. This draft explores a different property: a holder may elect a protected delegation boundary beyond which superior authorities can no longer reclaim the resource, suppress the holder's effective origin authorizations, or create competing allocation or route-origin authority. It specifies a hierarchical IPv4/IPv6 resource registry that enforces this at state-transition time and derives conventional VRPs for ROV, with conflict and precedence rules for coexistence with RPKI-derived authority. Routers and the RPKI itself are unchanged. The mechanism can also cover resources RPKI does not protect today, including legacy space. Experimental -00; feedback sought on whether protected delegation is a useful property, on the RPKI coexistence/precedence semantics, and on the trust, recovery and finality tradeoffs.
+- Datatracker Link: 
+    - [draft-gersch-sidrops-sovereign-roots](https://datatracker.ietf.org/doc/draft-gersch-sidrops-sovereign-roots/)
 
 
 
-#### Buffer ZZ Minutes (Cumulative Time: 180 Minutes)
+#### 12. Export of BGP Prefix Origin Validation in IP Flow Information Export (IPFIX)
+- Speaker: Xueyan Song
+   - Duration: 5 minutes (Cumulative Time: *125 Minutes*)
+- Expected outcome: community feedback
+- Abstract:The draft defines an IPFIX Information Element to export the RPKI-based BGP Prefix Origin Validation state (valid/invalid/not-found) for the active Loc-RIB route. It gives operators standardized visibility into ROV outcomes alongside flow monitoring, helping detect hijacks/misconfigurations and bridging SIDR operations with existing IPFIX tooling. 
+- Datatracker Link: 
+    - [draft-liu-sidrops-ipfix-bgp-pov](https://datatracker.ietf.org/doc/draft-liu-sidrops-ipfix-bgp-pov/)
 
----
-### IF (BY ANY CHANCE) TIME ALLOWS
-
-#### A.1 XXX
-- Speaker: 
-    - Duration: XX minutes (Cumulative Time: *YY Minutes*)
-    - Expected outcome: 
-    - Abstract: 
-    - Datatracker link(s): 
-      - [Datatracker](https://datatracker.ietf.org/group/sidrops/documents/) 
-
+#### Buffer 55 Minutes (Cumulative Time: 180 Minutes)
